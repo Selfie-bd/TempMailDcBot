@@ -1,0 +1,52 @@
+{
+    "name": "Mail Gen Dc BOT",
+    "description": " API base pyrogram fake mail gen bot source code here !",
+    "repository": "https://github.com/selfie-bd",
+    "logo":"https://telegra.ph/file/281c94a2c4a76f5107ae2.jpg",
+    "keywords": [
+        "Bot",
+        "Telegram ",
+        "Pyrogram "
+    ],
+    "env": {
+        "API_ID": {
+            "description": "Get from my.telegram.org/apps",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get from my.telegram.org/apps",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "get from @BotFather",
+            "required": true
+        },
+        "DATABASE": {
+            "description": "get from mongo",
+            "required": true
+        },
+        "CHANNEL_ID": {
+            "description": "frwd channel msg to @idgetdcbot and reply with id cmd",
+            "required": true
+        },
+        "CHANNEL": {
+            "description": "channel username without @",
+            "required": true
+        },
+        "OWNER": {
+            "description": "owner id get it from @idgetdcbot send /id cmd",
+            "required": true
+        }
+    },
+    "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
